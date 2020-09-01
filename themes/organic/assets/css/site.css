@@ -71,7 +71,7 @@ content blockquote {
 }
 
 content pre {
-  @apply bg-gray-200 text-gray-800 p-2 rounded-sm my-2;
+  @apply bg-gray-200 text-gray-800 p-2 rounded-sm my-2 overflow-x-auto overflow-y-hidden;
 }
 
 content ul, content ol {
