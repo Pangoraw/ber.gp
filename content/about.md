@@ -16,5 +16,6 @@ This website is built using mainly open source software listed above in no parti
 - [TailwindCSS](https://tailwindcss.com) for styling
 - [GitHub](https://github.com) for source hosting
 - [Netlify](https://netlify.com) to host the static files on the web
+- [Mathjax](https://www.mathjax.org/) to display equations on certain blog posts
 
 I was able to use TailwindCSS with Hugo by looking at [this hugo theme](https://bento-hugo-theme.netlify.app/).

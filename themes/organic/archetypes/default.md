@@ -1,3 +1,4 @@
 +++
 showTOC = false
+importMathjax = false
 +++
