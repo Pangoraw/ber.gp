@@ -3,7 +3,7 @@
 <article class="mx-4 sm:mx-0">
   <h1 class="text-gray-800 text-4xl mt-3">{{ .Title }}</h1>
 
-  {{ if ne .Dir "/" }}
+  {{ if ne .File.Dir "/" }}
     <div class="text-sm text-gray-800 w-full mb-4">
       {{ .Date.Format "01/02/2006" }} &middot;
       {{ .ReadingTime }} {{ cond (gt .ReadingTime 1) "minutes" "minute" }}
