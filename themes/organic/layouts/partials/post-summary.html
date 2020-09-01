@@ -1,0 +1,11 @@
+<div class="w-full">
+  <h2 class="text-xl">{{ .Key }}</h2>
+
+  <ol class="ml-3 w-full">
+    {{ range where .Pages "Type" "ne" "page" }}
+      <li class="w-full">
+        <a href="{{ .RelPermalink }}" class="block p-2 rounded-sm w-full bg-white hover:bg-blue-300 transition-all transition-100">>&nbsp;<span class="underline">{{ .Title }} - {{ .Date.Format "01/02/2006" }}</span></a>
+      </li>
+    {{- end }}
+  </ol>
+</div>

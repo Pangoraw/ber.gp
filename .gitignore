@@ -1,1 +1,10 @@
 *.txt
+
+### Hugo ###
+# Generated files by hugo
+/public/
+/resources/_gen/
+hugo_stats.json
+themes/*/node_modules/
+
+

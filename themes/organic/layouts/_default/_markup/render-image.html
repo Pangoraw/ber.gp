@@ -1,0 +1,7 @@
+<img
+  class="rounded-sm my-4"
+  src="{{ .Destination | safeURL }}" 
+  alt="{{ .Text }}" 
+  {{ with .Title}} 
+    title="{{ . }}"
+  {{ end }} />

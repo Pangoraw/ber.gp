@@ -1,0 +1,11 @@
+<a
+  class="transition-colors transition-75 text-blue-900 hover:text-blue-800" 
+  href="{{ .Destination | safeURL }}"
+  {{ with .Title}} 
+    title="{{ . }}"
+  {{ end }}
+  {{ if strings.HasPrefix .Destination "http" }} 
+    target="_blank" rel="noopener"
+  {{ end }}>
+  {{ .Text | safeHTML }}
+</a>

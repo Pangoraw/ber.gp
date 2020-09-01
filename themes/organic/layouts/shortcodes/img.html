@@ -1,0 +1,22 @@
+<figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
+    {{ with .Get "link"}}<a href="{{.}}">{{ end }}
+        <img 
+          class="rounded-sm"
+          src="{{ .Get "src" }}" 
+          {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} 
+          />
+    {{ if .Get "link"}}</a>{{ end }}
+    {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}
+    <figcaption class="text-gray-700 text-sm mt-1">
+      {{ if isset .Params "title" }}
+        <span class="font-bold">{{ .Get "title" }}:</span>
+      {{ end }}
+      {{ if or (.Get "caption") (.Get "attr")}}
+        {{ .Get "caption" }}
+        {{ with .Get "attrlink"}}<a href="{{.}}"> {{ end }}
+            {{ .Get "attr" }}
+        {{ if .Get "attrlink"}}</a> {{ end }}
+      {{ end }}
+    </figcaption>
+    {{ end }}
+</figure>

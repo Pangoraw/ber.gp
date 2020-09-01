@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<article class="mx-4 sm:mx-0">
+  <h1 class="text-gray-800 text-4xl my-3">{{ .Title }}</h1>
+
+  {{ if .Params.showTOC }}
+    {{ .TableOfContents }}
+  {{ end }}
+
+  <content>
+    {{ .Content }}
+  </content>
+
+</article>
+
+{{ end }}

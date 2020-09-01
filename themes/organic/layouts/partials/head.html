@@ -1,0 +1,29 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:locale" content="{{ .Language.Lang }}">
+    <meta name="language" content="{{ .Language.Lang }}">
+
+    <title itemprop="name">
+      {{ if ne .Permalink "/" }}
+        {{ .Title }} &middot; 
+      {{ end }}
+      {{ .Site.Title }}
+    </title>
+    <base href="{{ .Permalink }}">
+
+    {{ with.Params.author }}
+      <meta property="og:article:author" content="{{ . }}">
+      <meta property="article:author" content="{{ . }}">
+      <meta name="author" content="{{ . }}">
+    {{ end }}
+
+    {{ $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") }}
+
+	{{ if .Site.IsServer }}
+	    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+	{{ else }}
+	    {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+	    <link rel="stylesheet" href="{{ $styles.Permalink }}">
+	{{ end }}
+</head>
