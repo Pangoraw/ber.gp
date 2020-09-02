@@ -5,7 +5,11 @@
 
   {{ if ne .File.Dir "/" }}
     <div class="text-sm text-gray-800 w-full mb-4">
-      {{ .Date.Format "01/02/2006" }} &middot;
+      {{ if .Params.when }}
+        {{ .Params.when }}
+      {{ else }}
+        {{ .Date.Format "01/02/2006" }}
+      {{end}} &middot;
       {{ .ReadingTime }} {{ cond (gt .ReadingTime 1) "minutes" "minute" }}
     </div>
   {{ end }}

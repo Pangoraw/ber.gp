@@ -1,4 +1,4 @@
-<figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
+<figure class="mb-2 {{ if isset .Params "center" }}flex items-center flex-col{{ end }} {{ if isset .Params "class" }}{{.Get "class" }}{{ end }} ">
     {{ with .Get "link"}}<a href="{{.}}">{{ end }}
         <img 
           class="rounded-sm"
@@ -12,7 +12,7 @@
         <span class="font-bold">{{ .Get "title" }}:</span>
       {{ end }}
       {{ if or (.Get "caption") (.Get "attr")}}
-        {{ .Get "caption" }}
+        {{ markdownify (.Get "caption") }}
         {{ with .Get "attrlink"}}<a href="{{.}}"> {{ end }}
             {{ .Get "attr" }}
         {{ if .Get "attrlink"}}</a> {{ end }}

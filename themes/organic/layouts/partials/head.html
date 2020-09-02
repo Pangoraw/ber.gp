@@ -5,7 +5,7 @@
     <meta name="language" content="{{ .Language.Lang }}">
 
     <title itemprop="name">
-      {{ if ne .Permalink "/" }}
+      {{ if ne .RelPermalink "/" }}
         {{ .Title }} &middot; 
       {{ end }}
       {{ .Site.Title }}

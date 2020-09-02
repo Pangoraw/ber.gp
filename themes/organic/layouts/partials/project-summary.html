@@ -1,0 +1,24 @@
+<article class="w-full flex flex-col mb-2 items-center justify-between">
+  <div class="w-full flex mb-2 items-center justify-between">
+    <div class="flex flex-1 flex-wrap sm:flex-row flex-col sm:items-end items-start">
+      <h3 class="text-xl">{{ safeHTML .Page.Title }}</h3>        
+      <span class="text-sm text-gray-800 sm:ml-2">{{ .Page.Params.when }}</span>
+    </div>
+
+    <div class="leading-loose sm:leading-normal">
+    {{ range .Page.Keywords }}
+      <span class="ml-1 text-sm text-gray-900 tracking-tight border rounded p-1">
+        {{ safeHTML . }}
+      </span>
+    {{ end }}
+    </div>
+  </div>
+
+  <content class="text-gray-800 mb-2 text-justify">
+    {{ safeHTML .Summary }}
+  </content>
+
+  {{ if or .Truncated .Page.Params.summary }}
+    <a class="text-sm leading-tight p-2 mr-2 border transition-colors duration-100 text-blue-900 border-blue-900 hover:bg-blue-100 rounded-lg" href="{{ .Page.RelPermalink }}">Read more&hellip;</a>
+  {{ end }}
+</article>
