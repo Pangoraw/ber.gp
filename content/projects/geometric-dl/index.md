@@ -531,14 +531,14 @@ $ python train.py --log_dir train_results \
                   --cross_validation True
 ```
 
-This generates a file, `train_results/log_train_max_epoch.txt`, that contains the metrics for each `max_epoch` value.
+This generates a file, `log_train_max_epoch.txt` in the folder `train_results`, that contains the metrics for each `max_epoch` value.
 
 We should also specify the values to test beforehand, in the dictionary `hyperparameters` in `train.py` on line 365.
 In addition, if we want to test values for `num_points`, we also need to specify the path of each Dataset, in `DATA_PATHS` on line 363.
 
 ### 5.3 Testing
 
-Similarly to training, testing can be done by running \texttt{python test.py} in the `part_seg` folder.
+Similarly to training, testing can be done by running `python test.py` in the `part_seg` folder.
 The `test_results` folder generated afterwards contains multiples files:
 
 - A list of `.obj` files containing for each sample, the predicted result, the difference and the ground truth.

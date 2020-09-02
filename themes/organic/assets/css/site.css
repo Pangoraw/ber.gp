@@ -94,7 +94,13 @@ content ol {
 }
 
 content table {
-  @apply mx-auto text-left rounded-lg bg-gray-100;
+  @apply mx-auto block overflow-x-auto text-left rounded-lg bg-gray-100;
+}
+
+@media (min-width: 640px) {
+  content table {
+    @apply inline-block;
+  }
 }
 
 content table tr:nth-child(2n) td {
@@ -124,4 +130,9 @@ content table tbody tr:last-child td:last-child {
 content table td,
 content table th {
   @apply p-2;
+}
+
+/* purgecss ignore */
+content mjx-container {
+  @apply overflow-x-auto;
 }
