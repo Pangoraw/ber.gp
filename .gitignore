@@ -8,3 +8,6 @@ hugo_stats.json
 themes/*/node_modules/
 
 
+
+# Local Netlify folder
+.netlify
