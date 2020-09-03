@@ -19,3 +19,7 @@ This website is built using mainly open source software listed above in no parti
 - [Mathjax](https://www.mathjax.org/) to display equations on certain blog posts
 
 I was able to use TailwindCSS with Hugo by looking at [this hugo theme](https://bento-hugo-theme.netlify.app/).
+
+### Sources
+
+The source code for this website is available [on GitHub](https://github.com/Pangoraw/ber.gp). If you happen to find a typo or want to improve any part of the site, don't hesitate to open a pull-request.
