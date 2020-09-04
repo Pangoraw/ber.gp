@@ -2,6 +2,7 @@ baseURL = "https://www.ber.gp/"
 languageCode = "en-us"
 title = "Paul's blog"
 theme = "organic"
+enableRobotsTXT = true
 
 [build]
   writeStats = true
