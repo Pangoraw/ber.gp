@@ -2,20 +2,26 @@
   <div class="w-full flex mb-2 items-center justify-between">
     <div class="flex flex-1 flex-wrap sm:flex-row flex-col sm:items-end items-start">
       <h3 class="text-xl">{{ safeHTML .Page.Title }}</h3>        
-      <span class="text-sm text-gray-800 sm:ml-2">{{ .Page.Params.when }}</span>
+      <span class="text-sm text-gray-800 sm:ml-2">
+        {{ if .Page.Params.when }}
+          {{ .Page.Params.when }}
+        {{ else }}
+          {{ .Date.Format "02/01/2006" }}
+        {{ end }}
+      </span>
     </div>
 
     <div class="leading-loose sm:leading-normal">
-    {{ range .Page.Keywords }}
-      <span class="ml-1 text-sm text-gray-900 tracking-tight border rounded p-1">
-        {{ safeHTML . }}
-      </span>
+    {{ range .GetTerms "tags" }}
+      <a href="{{ .RelPermalink }}" class="whitespace-no-wrap ml-1 transition-colors duration-100 hover:bg-gray-200 text-sm text-gray-900 tracking-tight border rounded p-1">
+        {{ .Title }}
+      </a>
     {{ end }}
     </div>
   </div>
 
   <content class="text-gray-800 mb-2 text-justify">
-    {{ safeHTML .Summary }}
+    {{ .Summary }}
   </content>
 
   {{ if or .Truncated .Page.Params.summary }}

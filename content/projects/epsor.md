@@ -2,7 +2,7 @@
 title: "Developer internship @ <a href=\"https://www.epsor.fr\" class=\"text-blue-800 transition duration-75 ease-in-out hover:text-blue-900\">Epsor</a>"
 date: 2020-01-01T22:07:21+02:00
 draft: false
-keywords: 
+tags: 
 - NodeJS
 - React
 - Kafka

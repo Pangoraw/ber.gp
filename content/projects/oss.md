@@ -3,7 +3,7 @@ title: "Contributions to Open Source Software"
 date: 2016-09-01T22:07:55+02:00
 draft: false
 when: 2016 - Currently
-keywords:
+tags:
 - Typescript
 - Android
 - Golang

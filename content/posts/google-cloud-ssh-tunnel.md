@@ -3,6 +3,8 @@ title: "Google Compute Engine SSH Tunnel"
 date: 2020-09-01T13:03:47+02:00
 draft: false
 showTOC: false
+tags:
+ - Google Cloud
 ---
 
 ### TLDR

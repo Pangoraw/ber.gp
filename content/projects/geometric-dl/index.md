@@ -4,10 +4,10 @@ date: 2020-09-01T19:25:42+02:00
 draft: false
 importMathjax: true
 when: "Spring 2020"
-keywords:
+tags:
   - Python
   - Tensorflow
-  - Google&nbsp;Cloud
+  - Google Cloud
 summary:
   Study state of the arts models in the field of geometric deep learning.
   And then apply, by training models on a face segmentation dataset. Here is our

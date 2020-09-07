@@ -1,0 +1,9 @@
+{{ define "main" }}
+<main class="mx-4 sm:mx-0">
+  <h1 class="text-gray-800 text-4xl mt-3">{{ .Title }}</h1>
+
+  {{ range .Pages }}
+    {{ partial "project-summary.html" . }}
+  {{ end }}
+</main>
+{{ end }}
