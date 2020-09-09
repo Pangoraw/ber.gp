@@ -3,9 +3,15 @@
 
   <ol class="ml-3 w-full">
     {{ range where .Pages "Type" "ne" "page" }}
-      <li class="w-full">
-        <a href="{{ .RelPermalink }}" class="block p-2 rounded-sm w-full bg-white hover:bg-blue-300 transition-all duration-100">>&nbsp;<span class="underline">{{ .Title }} - {{ .Date.Format "01/02/2006" }}</span></a>
-      </li>
+    <li class="w-full">
+      <a
+        href="{{ .RelPermalink }}"
+        class="block p-2 rounded-sm w-full bg-white hover:bg-blue-300 transition-all duration-100"
+        >>&nbsp;<span class="underline"
+          >{{ .Title }} - {{ .Date.Format "02/01/2006" }}</span
+        ></a
+      >
+    </li>
     {{- end }}
   </ol>
 </div>
