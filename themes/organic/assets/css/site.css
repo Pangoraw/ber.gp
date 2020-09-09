@@ -1,7 +1,10 @@
-@import url('https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/inter.css');
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/inter.css");
 
 :root {
-  font-family: Inter;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-display: swap;
 }
 
 #TableOfContents {
@@ -20,11 +23,17 @@
   @apply text-blue-900;
 }
 
+::selection,
+::-moz-selection {
+  @apply bg-blue-200;
+}
+
 content p,
 content ul,
 content ol {
-  @apply text-lg mb-2 text-justify;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  @apply text-lg text-gray-900 mb-2 text-justify;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 content h1 {
@@ -33,23 +42,32 @@ content h1 {
 }
 
 content h2 {
-  @apply text-3xl text-gray-800;
+  @apply text-3xl;
 }
 
 content > h3 {
-  @apply text-2xl text-gray-800 mb-2;
+  @apply text-2xl;
 }
 
 content h4 {
-  @apply text-xl text-gray-800;
+  @apply text-xl;
 }
 
 content h5 {
-  @apply text-lg text-gray-800;
+  @apply text-lg;
 }
 
 content h6 {
-  @apply text-base text-gray-800;
+  @apply text-base;
+}
+
+content h1,
+content h2,
+content h3,
+content h4,
+content h5,
+content h6 {
+  @apply text-gray-800 mb-2;
 }
 
 content h2 > a.anchor-link,
@@ -60,10 +78,10 @@ content h6 > a.anchor-link {
   display: none;
 }
 
-content h2:hover > a.anchor-link, 
-content h3:hover > a.anchor-link, 
-content h4:hover > a.anchor-link, 
-content h5:hover > a.anchor-link, 
+content h2:hover > a.anchor-link,
+content h3:hover > a.anchor-link,
+content h4:hover > a.anchor-link,
+content h5:hover > a.anchor-link,
 content h6:hover > a.anchor-link {
   display: inline;
 }
@@ -76,7 +94,8 @@ content pre {
   @apply bg-gray-200 text-gray-800 p-2 rounded-sm my-2 overflow-x-auto overflow-y-hidden;
 }
 
-content ul, content ol {
+content ul,
+content ol {
   @apply my-2;
 }
 
