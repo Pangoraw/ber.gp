@@ -4,6 +4,9 @@ title = "Paul's blog"
 theme = "organic"
 enableRobotsTXT = true
 
+[minify]
+  disableSVG = true
+
 [build]
   writeStats = true
 
