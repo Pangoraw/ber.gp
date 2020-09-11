@@ -3,6 +3,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:locale" content="{{ .Language.Lang }}">
     <meta name="language" content="{{ .Language.Lang }}">
+    {{ if (eq .Page.Kind "404") }}
+      <meta name="robots" content="noindex" />
+    {{ end }}
 
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
@@ -40,5 +43,6 @@
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
   {{ end }}
 
+  <script src="https://pagecdn.io/lib/lazysizes/5.2.2/lazysizes.min.js" crossorigin="anonymous"  ></script>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.6.0/dist/alpine.min.js" defer></script>
 </head>

@@ -37,7 +37,8 @@
   </div>
 </header>
 
-{{ if .Site.Params.alert }}
+
+{{ if (and .Site.Params.alert (ne .Page.Kind "404")) }}
 <div 
   x-data="{ open: !localStorage.getItem('alert-{{ .Site.Params.alertKey }}') }" 
   x-show="open"

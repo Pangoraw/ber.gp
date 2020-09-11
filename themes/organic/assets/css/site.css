@@ -28,7 +28,7 @@
   @apply bg-blue-200;
 }
 
-content p,
+content > p,
 content ul,
 content ol {
   @apply text-lg text-gray-900 mb-2 text-justify;
@@ -94,6 +94,28 @@ content pre {
   @apply bg-gray-200 text-gray-800 p-2 rounded-sm my-2 overflow-x-auto overflow-y-hidden;
 }
 
+content > p > code {
+  @apply bg-gray-200 rounded;
+  padding: 0 .2em;
+}
+
+content .highlight {
+  @apply mb-2;
+}
+
+.highlight table {
+  @apply bg-transparent;
+}
+
+.highlight > div {
+  @apply rounded-sm;
+}
+
+.highlight pre ::selection,
+.highlight pre ::-moz-selection {
+  @apply bg-blue-900;
+}
+
 content ul,
 content ol {
   @apply my-2;
@@ -154,4 +176,8 @@ content table th {
 /* purgecss ignore */
 content mjx-container {
   @apply overflow-x-auto;
+}
+
+.h-screen-full {
+  height: calc(100vh - 10rem);
 }
