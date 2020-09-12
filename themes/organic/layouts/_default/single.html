@@ -1,5 +1,11 @@
 {{ define "main" }}
 
+{{ $cover := .Resources.GetMatch "cover.jpg" }}
+{{ if $cover }}
+  {{ $placeholder := ($cover.Resize "48x q20") | images.Filter (images.GaussianBlur 6) }}
+  <img data-sizes="auto" data-src="{{ $cover.RelPermalink }}" src="data:image/jpeg;base64,{{ $placeholder.Content | base64Encode }}" class="lazyload sm:rounded w-full" alt="">
+{{ end }}
+
 <article class="mx-4 sm:mx-0">
   <h1 class="text-gray-800 text-4xl mt-3">{{ .Title }}</h1>
 

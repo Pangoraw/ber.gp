@@ -1,6 +1,6 @@
 <figcaption class="text-gray-700 text-center text-sm my-2">
   {{ if isset .Params 1 }}
-    <span class="font-bold">{{ .Get 1 }}:</span>
+    <span class="font-bold" id="{{ anchorize (.Get 1) }}">{{ .Get 1 }}:</span>
   {{ end }}
   {{ if or (.Get 0) (.Get "attr")}}
     {{ markdownify (.Get 0) }}
