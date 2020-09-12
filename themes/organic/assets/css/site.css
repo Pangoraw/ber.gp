@@ -135,12 +135,12 @@ content ol {
 }
 
 content table {
-  @apply mx-auto block overflow-x-auto text-left rounded-lg bg-gray-100;
+  @apply mx-auto overflow-x-auto text-left rounded-lg bg-gray-100;
 }
 
-@media (min-width: 640px) {
+@media (max-width: 640px) {
   content table {
-    @apply inline-block;
+     @apply block;
   }
 }
 
