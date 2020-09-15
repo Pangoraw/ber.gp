@@ -10,10 +10,7 @@ tags:
   - Google Cloud
 summary:
   Study state of the arts models in the field of geometric deep learning.
-  And then apply, by training models on a face segmentation dataset. Here is our
-  fork of both the [PointNet](https://github.com/bdebbabi/PointNet) and
-  [PointNet++](https://github.com/Pangoraw/PointNet2) models. You can read 
-  the full report by clicking the Read more button.
+  And then apply, by training models on a face segmentation dataset. We provide our fork of both the PointNet and PointNet++ models.
 showTOC: true
 ---
 

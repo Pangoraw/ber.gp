@@ -181,3 +181,7 @@ content mjx-container {
 .h-screen-full {
   height: calc(100vh - 10rem);
 }
+
+.main-background {
+  background-color: #fafafa;
+}
