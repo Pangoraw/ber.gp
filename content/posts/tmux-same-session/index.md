@@ -26,7 +26,7 @@ We then makes the files executable:
 $ sudo chmod +x tmuxed
 ```
 
-We can finally edit our alacritty configuration file located at `~/.config/alacritty/alacritty.yml` to change the default shell used by alacritty:
+We can finally edit our alacritty configuration file named `alacritty.yml` located at `~/.config/alacritty` to change the default shell used by alacritty:
 
 ```yml
 # Shell
