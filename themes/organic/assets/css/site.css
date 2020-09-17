@@ -95,7 +95,7 @@ content pre {
 }
 
 content > p > code {
-  @apply bg-gray-200 rounded;
+  @apply bg-gray-200 whitespace-normal rounded;
   padding: 0 .2em;
 }
 
