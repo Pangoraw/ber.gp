@@ -2,7 +2,7 @@
 title: "Keeping the same tmux session across launches"
 date: 2020-09-13T00:23:15+02:00
 draft: false
-keywords:
+tags:
  - Linux
 ---
 

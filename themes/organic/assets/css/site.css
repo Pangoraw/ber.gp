@@ -122,16 +122,11 @@ content ol {
 }
 
 content ul {
-  @apply ml-4;
-}
-
-content ul > li::before {
-  content: "-";
-  margin-left: -1rem;
+  @apply ml-6 list-disc;
 }
 
 content ol {
-  @apply ml-4 list-decimal;
+  @apply ml-6 list-decimal;
 }
 
 content table {

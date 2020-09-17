@@ -13,8 +13,9 @@ enableRobotsTXT = true
 [markup.goldmark.renderer]
   unsafe = true
 
-pygmentsCodefences = true
-pygmentsStyle = "vs"
+[markup.highlight]
+  style = "monokai"
+  tabWidth = 2
 
 [params]
   name = "Paul Berg"
