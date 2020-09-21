@@ -8,9 +8,22 @@
       {{ .Site.Params.description }}
     </p>
 
-    <div class="mt-4">
+    <div x-data="{open: false}" class="mt-4">
       <a href="/projects" class="p-2 mr-2 border transition-colors duration-100 text-blue-900 border-blue-900 bg-white hover:bg-blue-100 rounded-lg">My projects</a>
-      <a href="pdfs/resume-fr.pdf" class="p-2 border rounded-lg text-red-700 bg-white hover:bg-red-100 border-red-700">🇫🇷 My resume</a>
+      <span @click="open=true" class="p-2 cursor-pointer border rounded-lg text-red-700 bg-white hover:bg-red-100 border-red-700">My resume</span>
+      <div
+        x-transition:enter="transition-all duration-100 ease-out-quad"
+        x-transition:leave="transition-all duration-100 ease-in-quad"
+        x-transition:enter-start="opacity-0 scale-70"
+        x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-70"
+        @click.away="open = false" 
+        x-show="open"
+        class="mt-8 underline leading-loose overflow-hidden bg-gray-100 mt-1">
+          <a class="hover:text-gray-800 block text-center" href="/pdfs/paul-resume-en.pdf">🇬🇧&nbsp;English version</a>
+          <a class="hover:text-gray-800 block text-center" href="/pdfs/paul-resume-fr.pdf">🇫🇷&nbsp;French version</a>
+        </div>
     </div>
 
     {{ if len (where site.RegularPages "Type" "ne" "page") }}
