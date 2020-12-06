@@ -8,7 +8,7 @@
 }
 
 #TableOfContents {
-  @apply p-2 bg-gray-100 rounded-sm mb-3;
+  @apply p-2 dark:bg-gray-900 bg-gray-100 rounded-sm mb-3;
 }
 
 #TableOfContents ul {
@@ -16,22 +16,22 @@
 }
 
 #TableOfContents a {
-  @apply text-blue-800;
+  @apply text-blue-800 dark:text-blue-300;
 }
 
 #TableOfContents a:hover {
-  @apply text-blue-900;
+  @apply text-blue-900 dark:text-blue-200;
 }
 
 ::selection,
 ::-moz-selection {
-  @apply bg-blue-200;
+  @apply dark:bg-blue-800 bg-blue-200;
 }
 
 content > p,
 content ul,
 content ol {
-  @apply text-lg text-gray-900 mb-2 text-justify;
+  @apply text-lg dark:text-gray-400 text-gray-900 mb-2 text-justify;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -67,7 +67,7 @@ content h3,
 content h4,
 content h5,
 content h6 {
-  @apply text-gray-800 mb-2;
+  @apply dark:text-blue-500 text-gray-800 mb-2;
 }
 
 content h2 > a.anchor-link,
@@ -87,7 +87,7 @@ content h6:hover > a.anchor-link {
 }
 
 content blockquote {
-  @apply my-2 text-lg rounded-sm text-gray-600 bg-gray-200 p-2 italic border-l-4 border-gray-600;
+  @apply my-2 text-lg rounded-sm dark:text-gray-500 text-gray-600 dark:bg-gray-900 bg-gray-200 p-2 pl-4 italic border-l-4 border-gray-600;
 }
 
 content pre {
@@ -95,8 +95,8 @@ content pre {
 }
 
 content > p > code {
-  @apply bg-gray-200 whitespace-normal rounded;
-  padding: 0 .2em;
+  @apply dark:text-gray-700 bg-gray-200 whitespace-normal rounded;
+  padding: .1em .2em;
 }
 
 content .highlight {
@@ -177,6 +177,3 @@ content mjx-container {
   height: calc(100vh - 10rem);
 }
 
-.main-background {
-  background-color: #fafafa;
-}

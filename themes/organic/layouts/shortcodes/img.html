@@ -7,7 +7,7 @@
           />
     {{ if .Get "link"}}</a>{{ end }}
     {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}
-    <figcaption class="text-gray-700 text-sm mt-1">
+    <figcaption class="dark:text-gray-600 text-gray-700 text-sm mt-1">
       {{ if isset .Params "title" }}
         <span class="font-bold">{{ .Get "title" }}:</span>
       {{ end }}

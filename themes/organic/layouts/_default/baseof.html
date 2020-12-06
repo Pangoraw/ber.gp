@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
     {{- partial "head.html" . -}}
-    <body class="main-background block mx-auto container min-h-screen flex flex-col lg:max-w-screen-md">
-        {{- partial "header.html" . -}}
-        <main class="flex-1" id="content">
-        {{- block "main" . }}{{- end }}
-        </main>
-        {{- partial "footer.html" . -}}
+    <body x-data="{dark: localStorage.getItem('darkTheme') === 'true'}" :class="{'dark': dark}" x-init="$watch('dark', (value) => localStorage.setItem('darkTheme', '' + value))">
+      <div class="dark:bg-gray-800 bg-gray-100 ">
+        <div class="block mx-auto container min-h-screen flex flex-col lg:max-w-screen-md">
+          {{- partial "header.html" . -}}
+          <main class="flex-1" id="content">
+          {{- block "main" . }}{{- end }}
+          </main>
+          {{- partial "footer.html" . -}}
+        </div>
+      </div>
     </body>
 </html>

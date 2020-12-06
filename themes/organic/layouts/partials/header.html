@@ -2,13 +2,17 @@
   class="px-3 md:px-0 py-3 flex justify-between items-center"
 >
   <div>
-    <a href="/" class="font-medium text-gray-900">{{ .Site.Params.name }}</a>
-    <p class="text-sm text-gray-800">{{ .Site.Params.shortBio }}</p>
+    <a href="/" class="font-medium dark:text-gray-300 text-gray-900">{{ .Site.Params.name }}</a>
+    <p class="text-sm dark:text-gray-400 text-gray-800">{{ .Site.Params.shortBio }}</p>
   </div>
   <div
     class="h-8 flex items-center "
   >
-    <a class="h-8 w-8 mr-2 hover:text-gray-700 transition-colors duration-200 ease-in-out text-gray-800" href="{{ .Site.Params.LinkedInLink }}">
+    <button @click="dark=!dark" class="focus:border-none flex items-center text-2xl h-8 w-8 mr-2 p-1 rounded-full dark:bg-blue-900 dark:hover:bg-blue-700 hover:bg-blue-300 transition-colors duration-50 bg-blue-200">
+      <p x-show="!dark">🌞</p>
+      <p x-show="dark">🌛</p>
+    </button>
+    <a class="h-8 w-8 mr-2 dark:hover:text-gray-500 hover:text-gray-700 transition-colors duration-200 ease-in-out dark:text-gray-400 text-gray-800" href="{{ .Site.Params.LinkedInLink }}">
       <svg
         class="fill-current"
         xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +25,7 @@
         />
       </svg>
     </a>
-    <a class="h-8 w-8 mr-1 hover:text-gray-700 transition-colors duration-200 ease-in-out text-gray-800" href="{{ .Site.Params.GitHubLink }}">
+    <a class="h-8 w-8 mr-1 dark:hover:text-gray-500 hover:text-gray-700 transition-colors duration-200 ease-in-out dark:text-gray-400 text-gray-800" href="{{ .Site.Params.GitHubLink }}">
       <svg
         class="fill-current"
         role="img"

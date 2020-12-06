@@ -1,6 +1,6 @@
 #!/bin/bash
 pushd themes/organic
-npm i -g postcss@8.1.0 postcss-cli@8.1.0 autoprefixer@10.0.1 tailwindcss@1.9.5
+npm i -g postcss@7.0.35 postcss-cli@8.3.0 autoprefixer@10.0.1 tailwindcss@compat
 npm i
 popd
 

@@ -1,16 +1,17 @@
 {{ define "main" }}
   <main class="flex flex-col items-center mt-8">
     <img
-      class="mb-8 h-48 w-48 sm:h-64 sm:w-64 rounded-full shadow-lg"
+      class="mb-8 h-48 w-48 sm:h-64 sm:w-64 rounded-full shadow-inset"
       src="images/pp.jpeg"
     />
-    <p class="text-justify mb-2 w-full sm:w-3/4 px-4 sm:px-0 mx-auto text-gray-900">
+    <!-- <canvas onload="initCanvas()" id="canvas"></canvas> -->
+    <p class="text-justify mb-2 w-full sm:w-3/4 px-4 sm:px-0 mx-auto dark:text-gray-300 text-gray-900">
       {{ .Site.Params.description }}
     </p>
 
     <div x-data="{open: false}" class="mt-4">
-      <a href="/projects" class="p-2 mr-2 border transition-colors duration-100 text-blue-900 border-blue-900 bg-white hover:bg-blue-100 rounded-lg">My projects</a>
-      <span @click="open=true" class="p-2 cursor-pointer border rounded-lg text-red-700 bg-white hover:bg-red-100 border-red-700">My resume</span>
+      <a href="/projects" class="p-2 cursor-pointer border rounded-lg dark:text-blue-400 text-blue-700 dark:bg-gray-800 bg-white dark:hover:bg-gray-700 hover:bg-blue-100 dark:border-blue-400 border-blue-700">My projects</a>
+      <span @click="open=true" class="p-2 cursor-pointer border rounded-lg dark:text-red-400 text-red-700 dark:bg-gray-800 bg-white dark:hover:bg-gray-700 hover:bg-red-100 dark:border-red-400 border-red-700">My resume</span>
       <div
         x-transition:enter="transition-all duration-100 ease-out-quad"
         x-transition:leave="transition-all duration-100 ease-in-quad"
@@ -20,18 +21,41 @@
         x-transition:leave-end="opacity-0 scale-70"
         @click.away="open = false" 
         x-show="open"
-        class="mt-8 underline leading-loose overflow-hidden bg-gray-100 mt-1">
-          <a class="hover:text-gray-800 block text-center" href="/pdfs/paul-resume-en.pdf">🇬🇧&nbsp;English version</a>
-          <a class="hover:text-gray-800 block text-center" href="/pdfs/paul-resume-fr.pdf">🇫🇷&nbsp;French version</a>
+        class="mt-8 underline dark:text-gray-500 leading-loose overflow-hidden mt-1">
+          <a class="dark:hover:text-gray-400 hover:text-gray-800 block text-center" href="/pdfs/paul-resume-en.pdf">🇬🇧&nbsp;English version</a>
+          <a class="dark:hover:text-gray-400 hover:text-gray-800 block text-center" href="/pdfs/paul-resume-fr.pdf">🇫🇷&nbsp;French version</a>
         </div>
     </div>
 
     {{ if len (where site.RegularPages "Type" "ne" "page") }}
-    <div class="px-4 sm:px-0 mt-3 w-full sm:w-3/4 text-gray-900">
+    <div class="px-4 sm:px-0 mt-3 w-full sm:w-3/4 dark:text-gray-400 text-gray-900">
       {{ range (where site.RegularPages ".Section" "eq" "posts").GroupByDate "2006" -}}
         {{ partial "post-summary.html" . }}
       {{ end }}
     </div>
     {{ end }}
   </main>
+  <!--<script>
+    function playCanvas(ctx) {
+      // TODO: Finish drawing
+      ctx.strokeStyle = 'rgb(100, 100, 100, 0.75)';
+      ctx.beginPath();
+      ctx.bezierCurveTo(10, 0, 180, 10, 150, 70);
+      ctx.bezierCurveTo(150, 70, 40, 150, 10, 0);
+      ctx.stroke();
+    }
+
+    function initCanvas() {
+      const canvas = document.getElementById("canvas");
+      console.log("canvas", canvas);
+      if (canvas.getContext) {
+        const ctx = canvas.getContext("2d");
+        playCanvas(ctx);
+      } else {
+          canvas.style.display = "none";
+      }
+    }
+
+    initCanvas();
+  </script>-->
 {{ end }}
