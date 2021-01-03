@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Paul's blog"
 theme = "organic"
 enableRobotsTXT = true
+enableEmoji = true
 
 [minify]
   disableSVG = true
@@ -20,6 +21,6 @@ enableRobotsTXT = true
 [params]
   name = "Paul Berg"
   shortBio = "Computer Science student"
-  description = "I am a 21 years old computer science student interested in Machine Learning, Data-science and many more fields. You can learn more about me by looking at my projects or by downloading my resume."
+  description = "I am a 22 years old computer science student interested in Machine Learning, Data-science and many more fields. You can learn more about me by looking at my projects or by downloading my resume."
   LinkedInLink = "https://www.linkedin.com/in/paul-brg"
   GithubLink = "https://github.com/Pangoraw"
